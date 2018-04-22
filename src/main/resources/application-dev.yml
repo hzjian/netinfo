@@ -1,0 +1,20 @@
+server:
+  port: 8088
+system:
+  appName: bssystem
+  token: tH_YoqyCOWUwDzNcVJwSjpdiTIx5KYh7h32FR4NPytaiEtKBJ19YkfUWQMTTBL7t
+  gisServerPath: http://192.168.1.114:6080/arcgis/rest/services
+jwt:
+  tokenName: x-auth-token
+  secret: mySecret
+  expiration: 3600
+  tokenHead: "Bearer "
+  access_token:
+    expiration: 86400
+  refresh_token:
+    expiration: 3600
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: "auth/register"
